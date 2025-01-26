@@ -11,13 +11,50 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(title: Text('Fast Food App')),
       drawer: AppDrawer(),
       body: ListView(
-        // children: [
-        //   FoodCard(name: 'Fries', image: 'assets/fries.png'),
-        //   FoodCard(name: 'Fries', image: 'assets/fries.png'),
-        //   FoodCard(name: 'Fries', image: 'assets/fries.png'),
-        //   FoodCard(name: 'Fries', image: 'assets/fries.png'),
-        // ],
         children: [
+          Stack(
+            children: [
+              Container(
+                width: double.infinity,
+                height: 250,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/home_banner.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                height: 250,
+                color: Colors.black.withOpacity(0.7),
+              ),
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      '\nFast Food',
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red,
+                      ),
+                    ),
+                    Text(
+                      'App',
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
           GestureDetector(
             onTap: () {
               Navigator.push(

@@ -6,17 +6,19 @@ class LocationsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Locations')),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // Optional: Center both vertically
-          children: [
-            Image.asset("assets/location.png"),
-            Text(
-              'Locations \nSkopje\nTetovo\nOhrid',
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Image.asset("assets/location.png"),
+          Padding(
+            padding: EdgeInsets.only(top: 20.0, left: 20.0),
+            child: Text(
+              'Locations\n\nSkopje\nTetovo\nOhrid',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavBar(),
     );
